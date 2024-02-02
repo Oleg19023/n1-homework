@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список товаров</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">More</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Examples</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <button id="themeToggle" class="btn btn-outline-secondary">
+              <i id="themeIcon" class="fas fa-moon"></i>
+          </button>
+          </div>
+        </div>
+    </nav>
+</header>
+<main class="container">
+	<div class="container">
+	
+		<div class="row">
+		
+			<div class="col-12 text-center my-4">
+				<h1 class="display-1">
+					<i class="fas fa-blender-phone"></i> 
+					PhonesShop
+				</h1>
+			</div>
+			<div class="col-12 col-lg-6 offset-lg-3">
+				<ul class="list-group" id="phones_ul">
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						iPhone 8
+						<span class="badge bg-primary badge-pill">DKK 654</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						iPhone 7
+						<span class="badge bg-primary badge-pill">USD 64</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						Apple iPhone 6
+						<span class="badge bg-primary badge-pill">SEK 465</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						Samsung Galaxy S9
+						<span class="badge bg-primary badge-pill">EUR 456</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						Nokia 3310
+						<span class="badge bg-primary badge-pill">USD 567</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						HTC Two M3
+						<span class="badge bg-primary badge-pill">HUF 7999</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						Lenovo H6000
+						<span class="badge bg-primary badge-pill">MXN 199</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						Microsoft Lumia 950
+						<span class="badge bg-primary badge-pill">CHF 567</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						Sony Ericsson  K750 Gold
+						<span class="badge bg-primary badge-pill">USD 456</span>
+					</li>					
+				</ul>
+			</div>
+      <select id="currencySelect">
+        <option>...</option>
+        <option value="UAH">UAH</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+		</div>	
+	</div>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
