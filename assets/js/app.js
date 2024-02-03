@@ -19,7 +19,7 @@ document.getElementById('themeToggle').addEventListener('click', function() {
 });
 
 
-// Получаем курсы валют от НБУ
+// Курсы валют
 fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
     .then(response => response.json())
     .then(data => {
@@ -30,7 +30,15 @@ fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
 
         rates["UAH"] = 1;
 
-        // Пересчитываем цены товаров
+        let select = document.getElementById('currencySelect');
+        for (let currency in rates) {
+            let option = document.createElement('option');
+            option.value = currency;
+            option.text = currency;
+            select.appendChild(option);
+        }
+
+        // Цены товаров
         function recalculatePrices(selectedCurrency) {
             let items = document.querySelectorAll('#phones_ul li');
             items.forEach(item => {
@@ -45,13 +53,7 @@ fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
             });
         }
 
-        // Добавляем обработчик событий для элемента select
-        let select = document.getElementById('currencySelect');
         select.addEventListener('change', function() {
             recalculatePrices(this.value);
         });
     });
-
-
-
-
